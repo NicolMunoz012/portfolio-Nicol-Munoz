@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
+/* Comentario: Tailwind v4 - estrategia dark mode por clase (obligatoria). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Comentario: Tokens semánticos del tema claro (RGB para soportar /opacity en Tailwind). */
+  --background: 249 246 238; /* #f9f6ee */
+  --foreground: 43 22 58; /* purple oscuro */
+  --muted: 90 60 116; /* purple medio */
+  --muted-foreground: 114 85 140; /* purple suave para meta */
+  --surface: 255 253 247; /* superficie clara */
+  --surface-2: 248 242 232; /* superficie alternativa */
+  --border: 227 214 240; /* lavanda suave */
+  --accent: 216 112 159; /* rosa-malva */
+  --accent-foreground: 249 246 238; /* bone */
+  --ambient-1: 252 231 243; /* pink suave */
+  --ambient-2: 224 231 255; /* indigo suave */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Comentario: Colores de Tailwind expuestos como tokens semánticos. */
+  --color-background: rgb(var(--background) / <alpha-value>);
+  --color-foreground: rgb(var(--foreground) / <alpha-value>);
+  --color-muted: rgb(var(--muted) / <alpha-value>);
+  --color-muted-foreground: rgb(var(--muted-foreground) / <alpha-value>);
+  --color-surface: rgb(var(--surface) / <alpha-value>);
+  --color-surface-2: rgb(var(--surface-2) / <alpha-value>);
+  --color-border: rgb(var(--border) / <alpha-value>);
+  --color-accent: rgb(var(--accent) / <alpha-value>);
+  --color-accent-foreground: rgb(var(--accent-foreground) / <alpha-value>);
+  --font-sans: var(--font-body-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  /* Comentario: Tokens semánticos del tema oscuro (fondo morado profundo, texto bone). */
+  --background: 22 11 34; /* plum/eggplant */
+  --foreground: 249 246 238; /* #f9f6ee */
+  --muted: 201 184 218; /* lavanda clara */
+  --muted-foreground: 226 214 236; /* bone-lavender */
+  --surface: 31 16 48; /* superficie */
+  --surface-2: 40 20 62;
+  --border: 58 31 85;
+  --accent: 229 154 196;
+  --accent-foreground: 22 11 34;
+  --ambient-1: 44 18 64;
+  --ambient-2: 18 8 28;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(var(--background) / 1);
+  background: radial-gradient(
+    circle at top,
+    rgb(var(--ambient-1) / 1) 0,
+    rgb(var(--ambient-2) / 1) 38%,
+    rgb(var(--background) / 1) 120%
+  );
+  color: rgb(var(--foreground) / 1);
+  font-family: var(--font-body-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "Segoe UI", sans-serif;
+  transition:
+    background-color 220ms ease-out,
+    color 220ms ease-out;
 }
+
