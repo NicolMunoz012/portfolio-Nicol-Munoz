@@ -21,18 +21,15 @@ export function HeroSection() {
 
         {/* Texto principal */}
         <div className="flex max-w-3xl flex-col items-center gap-6 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent/90">
-            {t("hero.eyebrow")}
-          </p>
-          <h1 className="font-display text-[clamp(2.8rem,6vw,5rem)] font-semibold leading-tight text-foreground">
+          <h1 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-tight text-foreground">
             {t("hero.title")}
           </h1>
-          <p className="max-w-2xl text-pretty text-[clamp(1rem,2.3vw,1.25rem)] leading-relaxed text-muted-foreground">
+          <p className="max-w-2xl text-pretty text-[clamp(0.9rem,2vw,1.05rem)] leading-relaxed text-muted-foreground">
             {t("hero.subtitle")}
           </p>
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-transparent px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/60 hover:bg-accent/10"
+            className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-transparent px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/60 hover:bg-accent/10 btn-ghost"
             aria-label={t("hero.cvButton")}
           >
             {t("hero.cvButton")}

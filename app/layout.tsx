@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   Bricolage_Grotesque,
-  Geist_Mono,
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
@@ -15,11 +14,6 @@ const displayFont = Bricolage_Grotesque({
 
 const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body-sans",
-  subsets: ["latin"],
-});
-
-const monoFont = Geist_Mono({
-  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -37,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} antialiased`}
+        className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
         <RootProviders>
           <AppShell>{children}</AppShell>

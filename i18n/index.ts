@@ -24,16 +24,15 @@ export function getTranslation(
   locale: SupportedLocale,
   path: TranslationPath,
 ): string {
-  // Comentario: Resuelve una clave de traducción anidada usando notación de puntos.
   const segments = path.split(".");
   let current: unknown = translations[locale];
 
   for (const segment of segments) {
-    if (
-      typeof current === "object" &&
-      current !== null &&
-      Object.prototype.hasOwnProperty.call(current, segment)
-    ) {
+    if (current === null || current === undefined) return path;
+    if (Array.isArray(current)) {
+      const idx = Number(segment);
+      current = current[idx];
+    } else if (typeof current === "object") {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       current = (current as any)[segment];
     } else {
@@ -41,10 +40,20 @@ export function getTranslation(
     }
   }
 
-  if (typeof current === "string") {
-    return current;
-  }
-
+  if (typeof current === "string") return current;
   return path;
 }
 
+
+// Helper para leer arrays de objetos desde las traducciones sin pasar por TranslationPath
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getTranslationArray(locale: SupportedLocale, path: string): any[] {
+  const segments = path.split(".");
+  let current: unknown = translations[locale];
+  for (const segment of segments) {
+    if (current === null || current === undefined) return [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    current = (current as any)[segment];
+  }
+  return Array.isArray(current) ? current : [];
+}

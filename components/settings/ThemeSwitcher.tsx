@@ -17,7 +17,7 @@ export function ThemeSwitcher() {
         <button
           type="button"
           onClick={() => setTheme("light")}
-          className={`flex flex-col items-start gap-1 rounded-xl border px-3 py-2 text-left text-xs transition-colors ${
+          className={`flex flex-col items-start gap-1 rounded-xl border px-3 py-2 text-left text-xs transition-colors btn-ghost ${
             theme === "light"
               ? "border-accent/60 bg-accent/10 text-foreground shadow-sm"
               : "border-border/70 bg-surface/40 text-muted-foreground hover:border-accent/30 hover:bg-accent/5"
@@ -30,7 +30,7 @@ export function ThemeSwitcher() {
         <button
           type="button"
           onClick={() => setTheme("dark")}
-          className={`flex flex-col items-start gap-1 rounded-xl border px-3 py-2 text-left text-xs transition-colors ${
+          className={`flex flex-col items-start gap-1 rounded-xl border px-3 py-2 text-left text-xs transition-colors btn-ghost ${
             theme === "dark"
               ? "border-accent/60 bg-accent/10 text-foreground shadow-sm"
               : "border-border/70 bg-surface/40 text-muted-foreground hover:border-accent/30 hover:bg-accent/5"

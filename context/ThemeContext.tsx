@@ -70,8 +70,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const toggleTheme = useCallback(() => {
     // Comentario: Alterna entre modo claro y oscuro.
-    setTheme((current) => (current === "dark" ? "light" : "dark"));
-  }, [setTheme]);
+    setThemeState((current) => {
+      const next = current === "dark" ? "light" : "dark";
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(THEME_STORAGE_KEY, next);
+      }
+      applyThemeToDocument(next);
+      return next;
+    });
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>

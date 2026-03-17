@@ -65,3 +65,18 @@ body {
     color 220ms ease-out;
 }
 
+
+/* Oculta scrollbar visualmente pero mantiene scroll funcional */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Estado active para elementos interactivos */
+.btn-ghost {
+  @apply active:scale-95 active:bg-accent/20 active:border-accent/80 active:text-accent transition-all;
+}
+.btn-icon {
+  @apply active:scale-90 active:text-accent/70 transition-all;
+}
+.nav-link {
+  @apply active:text-accent/60 active:scale-95 transition-all;
+}

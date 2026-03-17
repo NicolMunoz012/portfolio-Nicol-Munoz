@@ -15,7 +15,6 @@ export function Section({
   children,
   alignTitle = "left",
 }: SectionProps) {
-  // Comentario: Contenedor de sección reutilizable con tipografía y espaciado coherentes.
   return (
     <section
       id={id}
@@ -30,11 +29,11 @@ export function Section({
               : ""
         }`}
       >
-        <h2 className="font-display text-balance text-[clamp(2.2rem,4vw,4rem)] font-semibold tracking-tight text-foreground">
+        <h2 className="font-display text-balance text-[clamp(1.75rem,3.5vw,3rem)] font-semibold tracking-tight text-foreground">
           {title}
         </h2>
         {subtitle ? (
-          <p className="text-sm leading-relaxed text-muted sm:text-base">
+          <p className="text-sm leading-relaxed text-muted">
             {subtitle}
           </p>
         ) : null}
@@ -47,4 +46,3 @@ export function Section({
     </section>
   );
 }
-
