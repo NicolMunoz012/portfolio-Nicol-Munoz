@@ -4,18 +4,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Comentario: Tokens semánticos del tema claro (RGB para soportar /opacity en Tailwind). */
-  --background: 249 246 238; /* #f9f6ee */
-  --foreground: 43 22 58; /* purple oscuro */
-  --muted: 90 60 116; /* purple medio */
-  --muted-foreground: 114 85 140; /* purple suave para meta */
-  --surface: 255 253 247; /* superficie clara */
-  --surface-2: 248 242 232; /* superficie alternativa */
-  --border: 227 214 240; /* lavanda suave */
-  --accent: 216 112 159; /* rosa-malva */
-  --accent-foreground: 249 246 238; /* bone */
-  --ambient-1: 252 231 243; /* pink suave */
-  --ambient-2: 224 231 255; /* indigo suave */
+  /* Tokens semánticos del tema claro */
+  --background: 245 240 233; /* #F5F0E9 warm cream */
+  --foreground: 43 22 58;
+  --muted: 90 60 116;
+  --muted-foreground: 100 80 120;
+  --surface: 245 240 233; /* misma superficie */
+  --surface-2: 235 228 218;
+  --border: 220 205 190; /* tono cálido, sin líneas frías */
+  --accent: 143 18 66; /* #8F1242 */
+  --accent-foreground: 245 240 233;
+  --primary-dark: 109 11 49; /* #6D0B31 */
 }
 
 @theme inline {
@@ -51,12 +50,6 @@
 
 body {
   background-color: rgb(var(--background) / 1);
-  background: radial-gradient(
-    circle at top,
-    rgb(var(--ambient-1) / 1) 0,
-    rgb(var(--ambient-2) / 1) 38%,
-    rgb(var(--background) / 1) 120%
-  );
   color: rgb(var(--foreground) / 1);
   font-family: var(--font-body-sans), system-ui, -apple-system, BlinkMacSystemFont,
     "SF Pro Text", "Segoe UI", sans-serif;

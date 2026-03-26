@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col gap-20 md:gap-24">
       <HeroSection />
-      <ProjectsSection />
       <AboutSection />
+      <ProjectsSection />
       <SkillsSection />
       <ExperienceSection />
       <ContactSection />

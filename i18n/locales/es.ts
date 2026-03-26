@@ -10,7 +10,8 @@ export const esTranslations = {
   },
   hero: {
     eyebrow: "Portafolio",
-    title: "¡Hola! soy Nicol",
+    greeting: "¡Hola! soy",
+    name: "Nicol Muñoz",
     subtitle:
       "Estudiante de Ingeniería de Software con curiosidad constante por aprender y crear. Disfruto explorar diferentes áreas del desarrollo y construir soluciones tecnológicas que puedan generar un impacto positivo en las personas y en la sociedad.",
     cvButton: "Descargar CV",
@@ -20,9 +21,10 @@ export const esTranslations = {
       "Espacio para una futura animación o pieza interactiva.",
   },
   projects: {
+    code: "Código",
+    demo: "Demo",
     github: "GitHub",
     vercel: "Vercel",
-    demo: "Demo",
     visitGithub: "Visitar mi GitHub",
     imagePlaceholder: "Imagen",
     items: [

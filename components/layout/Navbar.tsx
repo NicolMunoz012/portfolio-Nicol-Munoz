@@ -32,12 +32,12 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-30 border-b border-border/70 bg-surface/90 backdrop-blur-xl transition-transform duration-300 ease-out ${isHidden ? "-translate-y-full" : "translate-y-0"}`}
+      className={`fixed inset-x-0 top-0 z-30 bg-surface/90 backdrop-blur-xl transition-transform duration-300 ease-out ${isHidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <nav className="mx-auto grid h-16 w-full max-w-6xl grid-cols-[auto_1fr] items-center gap-4 px-4 sm:h-18 sm:px-6 lg:h-20 lg:px-10">
         {/* Logo izquierdo */}
         <div className="flex items-center">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-surface-2/80 text-xs font-semibold text-foreground">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-xs font-semibold text-accent-foreground">
             NM
           </div>
         </div>
@@ -63,7 +63,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={toggleLanguage}
-              className="hidden h-8 min-w-[48px] items-center justify-center rounded-full border border-border/70 bg-surface/70 px-3 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-accent/60 hover:bg-accent/10 lg:flex btn-ghost"
+              className="hidden h-8 min-w-[48px] items-center justify-center rounded-full bg-surface-2/80 px-3 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-accent/10 hover:text-accent lg:flex btn-ghost"
               aria-label={`Switch to ${locale === "en" ? "Spanish" : "English"}`}
             >
               {locale.toUpperCase()}
@@ -73,7 +73,7 @@ export function Navbar() {
             <IconButton
               label="Toggle theme"
               onClick={toggleTheme}
-              className="h-8 w-8 rounded-full border-border/70 bg-surface/70 p-0 text-[13px]"
+              className="h-8 w-8 rounded-full bg-surface-2/70 p-0 text-[13px]"
               icon={<span>{theme === "dark" ? "☾" : "☼"}</span>}
             />
 
@@ -82,7 +82,7 @@ export function Navbar() {
               <IconButton
                 label="Open menu"
                 onClick={() => setIsMobileOpen((open) => !open)}
-                className="ml-1 h-8 w-8 rounded-full border-border/70 bg-surface/70 p-0 text-[11px]"
+                className="ml-1 h-8 w-8 rounded-full bg-surface-2/70 p-0 text-[11px]"
                 icon={
                   <span className="flex flex-col gap-0.5">
                     <span className="h-[1.5px] w-4 rounded-full bg-foreground" />
@@ -102,7 +102,7 @@ export function Navbar() {
       {/* Navegación móvil */}
       {isMobileOpen ? (
         <div className="lg:hidden">
-          <div className="fixed inset-x-0 top-16 z-20 rounded-b-3xl border-b border-border/70 bg-surface/95 px-4 pb-6 pt-4 shadow-[0_18px_40px_rgba(15,23,42,0.38)] backdrop-blur-xl">
+          <div className="fixed inset-x-0 top-16 z-20 rounded-b-3xl bg-surface/95 px-4 pb-6 pt-4 shadow-[0_18px_40px_rgba(15,23,42,0.18)] backdrop-blur-xl">
             <div
               id="mobile-nav"
               className="flex flex-col gap-4 text-sm text-foreground"
@@ -113,7 +113,7 @@ export function Navbar() {
                     key={item.key}
                     href={item.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className="flex flex-col gap-1 rounded-2xl border border-border/70 bg-surface/70 px-3 py-2 text-xs font-medium uppercase tracking-[0.18em] transition-colors hover:border-accent/40 hover:bg-accent/10 btn-ghost"
+                    className="flex flex-col gap-1 rounded-2xl bg-surface-2/80 px-3 py-2 text-xs font-medium uppercase tracking-[0.18em] transition-colors hover:bg-accent/10 hover:text-accent btn-ghost"
                   >
                     <span className="text-[10px] text-muted">
                       0{index + 1}
@@ -123,11 +123,11 @@ export function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-2 flex items-center justify-between rounded-2xl border border-border/70 bg-surface/80 px-3 py-2 text-xs">
+              <div className="mt-2 flex items-center justify-between rounded-2xl bg-surface-2/80 px-3 py-2 text-xs">
                 <button
                   type="button"
                   onClick={toggleLanguage}
-                  className="flex h-8 min-w-[48px] items-center justify-center rounded-full border border-border/70 bg-surface/70 px-3 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-accent/60 hover:bg-accent/10 btn-ghost"
+                  className="flex h-8 min-w-[48px] items-center justify-center rounded-full bg-surface/70 px-3 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-accent/10 btn-ghost"
                 >
                   {locale.toUpperCase()}
                 </button>

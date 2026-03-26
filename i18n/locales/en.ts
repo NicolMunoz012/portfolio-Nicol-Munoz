@@ -10,7 +10,8 @@ export const enTranslations = {
   },
   hero: {
     eyebrow: "Portfolio",
-    title: "Hi there, I'm Nicol",
+    greeting: "Hi there, I'm",
+    name: "Nicol Muñoz",
     subtitle:
       "Software Engineering student with a constant curiosity to learn and create. I enjoy exploring different areas of development and building technological solutions that can have a positive impact on people and society.",
     cvButton: "Download CV",
@@ -20,9 +21,10 @@ export const enTranslations = {
       "Space for a future animation or interactive piece.",
   },
   projects: {
+    code: "Code",
+    demo: "Demo",
     github: "GitHub",
     vercel: "Vercel",
-    demo: "Demo",
     visitGithub: "Visit my GitHub",
     imagePlaceholder: "Image",
     items: [
