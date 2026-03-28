@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
-import { HiDownload, HiExternalLink } from "react-icons/hi";
+import { Download, ExternalLink } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function HeroSection() {
@@ -62,8 +62,8 @@ export function HeroSection() {
           whileTap={{ scale: 0.95 }}
         >
           <span>{t("hero.cvButton")}</span>
-          <HiDownload size={18} />
-          <HiExternalLink size={18} />
+          <Download size={18} />
+          <ExternalLink size={18} />
         </motion.a>
 
         {/* Iconos de redes sociales */}

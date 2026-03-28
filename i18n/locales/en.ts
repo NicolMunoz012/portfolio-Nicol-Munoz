@@ -110,7 +110,7 @@ export const enTranslations = {
     },
     projects: {
       title: "My Projects",
-      subtitle: "Selected work that reflects my style and growth.",
+      subtitle: "A showcase of my technical evolution where I transform engineering concepts into functional and scalable applications.",
     },
     skills: {
       title: "Tech Stack",
@@ -118,15 +118,15 @@ export const enTranslations = {
     },
     contact: {
       title: "Contact",
-      subtitle: "Let's connect and create something beautiful.",
+      subtitle: "If you're interested in my work or want to know more about what I do, feel free to reach out.",
     },
     testimonials: {
       title: "Testimonials",
       subtitle: "What others say about working with me.",
     },
     experience: {
-      title: "Academic & Work Experience",
-      subtitle: "Education and professional path.",
+      title: "Experience",
+      subtitle: "A journey through my education and career path, from my early academic foundations to developing professional engineering solutions.",
       academic: "Academic",
       work: "Professional",
     },

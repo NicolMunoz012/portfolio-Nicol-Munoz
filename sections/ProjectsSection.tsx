@@ -34,14 +34,17 @@ export function ProjectsSection() {
   const links = PROJECT_LINKS[current] ?? [];
 
   return (
-    <section id="projects" className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 sm:px-6 lg:px-10 py-16">
+    <section id="projects" className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:px-10 py-16">
+      {/* Línea superior decorativa */}
+      <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#8b2f5c] to-transparent" />
+
       {/* Encabezado */}
       <Reveal direction="up">
-        <div className="flex flex-col gap-3">
-          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-bold tracking-tight text-[#8b2f5c]">
+        <div className="flex flex-col gap-3 text-center">
+          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-bold tracking-tight text-[#6D0B31]">
             {t("sections.projects.title")}
           </h2>
-          <p className="text-base text-foreground/70 max-w-2xl">
+          <p className="mx-auto max-w-2xl text-base text-foreground/70">
             {t("sections.projects.subtitle")}
           </p>
         </div>

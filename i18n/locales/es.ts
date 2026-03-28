@@ -105,12 +105,12 @@ export const esTranslations = {
   },
   sections: {
     about: {
-      title: "Sobre mí",
+      title: "Acerca de mí",
       subtitle: "Una joven diseñadora y desarrolladora creando experiencias digitales cinematográficas.",
     },
     projects: {
       title: "Mis Proyectos",
-      subtitle: "Trabajo seleccionado que refleja mi estilo y crecimiento.",
+      subtitle: "Una muestra de mi evolución técnica donde transformo conceptos de ingeniería en aplicaciones funcionales y escalables.",
     },
     skills: {
       title: "Stack tecnológico",
@@ -118,15 +118,15 @@ export const esTranslations = {
     },
     contact: {
       title: "Contacto",
-      subtitle: "Conectemos y creemos algo hermoso.",
+      subtitle: "Si te interesa mi trabajo o quieres saber más sobre lo que hago, no dudes en contactarme.",
     },
     testimonials: {
       title: "Testimonios",
       subtitle: "Lo que otros dicen sobre trabajar conmigo.",
     },
     experience: {
-      title: "Experiencia académica y laboral",
-      subtitle: "Breve descripción sobre las experiencias vividas y el aprendizaje.",
+      title: "Experiencia",
+      subtitle: "Un recorrido por mi formación y trayectoria, desde mis primeras bases académicas hasta el desarrollo de soluciones profesionales de ingeniería.",
       academic: "Académica",
       work: "Profesional",
     },
