@@ -4,8 +4,8 @@ import {
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
-import { RootProviders } from "../components/providers/RootProviders";
-import { AppShell } from "../components/layout/AppShell";
+import { RootProviders } from "./_components/providers/RootProviders";
+import { AppShell } from "./_components/layout/AppShell";
 
 const displayFont = Bricolage_Grotesque({
   variable: "--font-display",

@@ -28,6 +28,7 @@
   --color-border: rgb(var(--border) / <alpha-value>);
   --color-accent: rgb(var(--accent) / <alpha-value>);
   --color-accent-foreground: rgb(var(--accent-foreground) / <alpha-value>);
+  --color-primary-dark: rgb(var(--primary-dark) / <alpha-value>);
   --font-sans: var(--font-body-sans);
   --font-display: var(--font-display);
   --font-mono: var(--font-mono);
@@ -35,17 +36,17 @@
 
 .dark {
   /* Comentario: Tokens semánticos del tema oscuro (fondo morado profundo, texto bone). */
-  --background: 22 11 34; /* plum/eggplant */
+  --background: 28 18 45; /* plum/eggplant suavizado */
   --foreground: 249 246 238; /* #f9f6ee */
   --muted: 201 184 218; /* lavanda clara */
   --muted-foreground: 226 214 236; /* bone-lavender */
-  --surface: 31 16 48; /* superficie */
-  --surface-2: 40 20 62;
-  --border: 58 31 85;
+  --surface: 38 25 60; /* superficie */
+  --surface-2: 48 32 75;
+  --border: 68 45 105;
   --accent: 229 154 196;
-  --accent-foreground: 22 11 34;
-  --ambient-1: 44 18 64;
-  --ambient-2: 18 8 28;
+  --accent-foreground: 28 18 45;
+  --ambient-1: 54 28 84;
+  --ambient-2: 24 14 40;
 }
 
 body {
@@ -56,6 +57,12 @@ body {
   transition:
     background-color 220ms ease-out,
     color 220ms ease-out;
+}
+
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
 }
 
 

@@ -1,11 +1,11 @@
-import { HeroSection } from "../sections/HeroSection";
-import { ProjectsSection } from "../sections/ProjectsSection";
-import { AboutSection } from "../sections/AboutSection";
-import { SkillsSection } from "../sections/SkillsSection";
-import { ExperienceSection } from "../sections/ExperienceSection";
-import { TestimonialsSection } from "../sections/TestimonialsSection";
-import { ContactSection } from "../sections/ContactSection";
-import { Footer } from "../components/layout/Footer";
+import { HeroSection } from "./_sections/HeroSection";
+import { ProjectsSection } from "./_sections/ProjectsSection";
+import { AboutSection } from "./_sections/AboutSection";
+import { SkillsSection } from "./_sections/SkillsSection";
+import { ExperienceSection } from "./_sections/ExperienceSection";
+import { TestimonialsSection } from "./_sections/TestimonialsSection";
+import { ContactSection } from "./_sections/ContactSection";
+import { Footer } from "./_components/layout/Footer";
 
 export default function Home() {
   return (
